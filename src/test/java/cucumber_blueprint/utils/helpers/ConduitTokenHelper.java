@@ -6,6 +6,7 @@ import cucumber_blueprint.constants.HttpMethod;
 import cucumber_blueprint.core.api.SpecBuilder;
 import cucumber_blueprint.utils.ApiUtils;
 import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class ConduitTokenHelper {
@@ -32,9 +33,11 @@ public class ConduitTokenHelper {
                 .setBody(payload)
                 .build();
 
-        jsonPathEvaluator = ApiUtils.sendRequest(requestSpec, HttpMethod.POST).jsonPath();
-        System.out.println("json below");
-        System.out.println(jsonPathEvaluator);
-        return jsonPathEvaluator.get("jwt");
+        Response response = ApiUtils.sendRequest(requestSpec, HttpMethod.POST);
+        String resp = response.body().asString();
+
+        JsonPath js = new JsonPath(resp);
+
+        return js.get("user.token").toString();
     }
 }

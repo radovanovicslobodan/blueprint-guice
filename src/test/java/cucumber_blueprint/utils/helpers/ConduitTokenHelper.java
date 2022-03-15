@@ -11,7 +11,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class ConduitTokenHelper {
 
-    public static String postGetConduitToken(String email, String password) {
+    public static String postCreateConduitToken(String email, String password) {
 
         JsonObject user = new JsonObject();
         JsonObject credentials = new JsonObject();
@@ -23,9 +23,6 @@ public class ConduitTokenHelper {
 
         String payload = new Gson().toJson(user);
 
-        ConduitLoginBody body = new ConduitLoginBody(email, password);
-        JsonPath jsonPathEvaluator;
-
         RequestSpecification requestSpec = SpecBuilder
                 .requestSpecBuilder()
                 .setBaseUri("https://api.realworld.io")
@@ -34,9 +31,8 @@ public class ConduitTokenHelper {
                 .build();
 
         Response response = ApiUtils.sendRequest(requestSpec, HttpMethod.POST);
-        String resp = response.body().asString();
 
-        JsonPath js = new JsonPath(resp);
+        JsonPath js = new JsonPath(response.body().asString());
 
         return js.get("user.token").toString();
     }

@@ -34,7 +34,7 @@ public class ConduitSteps extends BaseUiSteps {
 
     @When("User is logged in")
     public void userIsLoggedIn() {
-        String jwt = ConduitTokenHelper.postGetConduitToken("test@test.me", "123456");
+        String jwt = ConduitTokenHelper.postCreateConduitToken("test@test.me", "123456");
         driver.get("https://redux.productionready.io/");
         driverHelpers.setItemToLocalStorage("jwt", jwt);
         driver.navigate().refresh();

@@ -1,4 +1,4 @@
-package cucumber_blueprint.utils.helpers;
+package cucumber_blueprint.utils.support;
 
 import lombok.Getter;
 import lombok.Setter;

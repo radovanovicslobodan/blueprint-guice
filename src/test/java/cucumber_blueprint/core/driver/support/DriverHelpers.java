@@ -1,4 +1,4 @@
-package cucumber_blueprint.core.driver.helpers;
+package cucumber_blueprint.core.driver.support;
 
 import com.google.inject.Inject;
 import io.qameta.allure.Allure;
@@ -40,15 +40,18 @@ public class DriverHelpers {
         }
     }
 
-    // getItemFromLocalStorage
     public String getItemFromLocalStorage(String key) {
         LocalStorage localStorage = webStorage.getLocalStorage();
         return localStorage.getItem(key);
     }
 
-    // addItemToLocalStorage
     public void setItemToLocalStorage(String key, String value) {
         LocalStorage localStorage = webStorage.getLocalStorage();
         localStorage.setItem(key, value);
+    }
+
+    public void clearLocalStorage() {
+        LocalStorage localStorage = webStorage.getLocalStorage();
+        localStorage.clear();
     }
 }

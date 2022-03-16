@@ -1,7 +1,7 @@
 package cucumber_blueprint.ui.steps;
 
 import com.google.inject.Inject;
-import cucumber_blueprint.core.driver.helpers.DriverHelpers;
+import cucumber_blueprint.core.driver.support.DriverHelpers;
 import cucumber_blueprint.ui.pages.GooglePage;
 import cucumber_blueprint.ui.pages.SpotifyPage;
 import cucumber_blueprint.ui.pages.WikipediaPage;

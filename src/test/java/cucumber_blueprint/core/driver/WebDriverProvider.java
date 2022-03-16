@@ -10,8 +10,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 
-import static cucumber_blueprint.core.driver.helpers.DriverOptions.chromeOptions;
-import static cucumber_blueprint.core.driver.helpers.DriverOptions.firefoxOptions;
+import static cucumber_blueprint.core.driver.support.DriverOptions.chromeOptions;
+import static cucumber_blueprint.core.driver.support.DriverOptions.firefoxOptions;
 import static cucumber_blueprint.utils.ConfigUtils.getProp;
 
 @ScenarioScoped

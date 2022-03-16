@@ -1,4 +1,4 @@
-package cucumber_blueprint.rest.helpers;
+package cucumber_blueprint.rest.support;
 
 import cucumber_blueprint.constants.HttpMethod;
 import cucumber_blueprint.constants.Paths;

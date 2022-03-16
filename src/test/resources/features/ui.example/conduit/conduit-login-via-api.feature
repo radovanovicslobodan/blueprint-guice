@@ -1,3 +1,4 @@
+@ui
 Feature: Login via API
 
   Background:

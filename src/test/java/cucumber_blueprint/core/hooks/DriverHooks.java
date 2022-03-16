@@ -1,7 +1,7 @@
 package cucumber_blueprint.core.hooks;
 
 import com.google.inject.Inject;
-import cucumber_blueprint.core.driver.helpers.DriverHelpers;
+import cucumber_blueprint.core.driver.support.DriverHelpers;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
@@ -24,6 +24,7 @@ public class DriverHooks {
 
         if (driver != null) {
             driver.manage().deleteAllCookies();
+            driverHelpers.clearLocalStorage();
             driver.quit();
         }
     }

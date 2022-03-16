@@ -1,4 +1,4 @@
-package cucumber_blueprint.utils.helpers;
+package cucumber_blueprint.utils.support;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -32,8 +32,8 @@ public class ConduitTokenHelper {
 
         Response response = ApiUtils.sendRequest(requestSpec, HttpMethod.POST);
 
-        JsonPath js = new JsonPath(response.body().asString());
+        JsonPath jsonPath = new JsonPath(response.body().asString());
 
-        return js.get("user.token").toString();
+        return jsonPath.get("user.token").toString();
     }
 }

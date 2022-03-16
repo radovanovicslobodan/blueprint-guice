@@ -1,10 +1,10 @@
 package cucumber_blueprint.ui.steps;
 
 import com.google.inject.Inject;
-import cucumber_blueprint.core.driver.helpers.DriverHelpers;
+import cucumber_blueprint.core.driver.support.DriverHelpers;
 import cucumber_blueprint.ui.pages.conduit.ConduitHomePage;
 import cucumber_blueprint.ui.pages.conduit.ConduitLoginPage;
-import cucumber_blueprint.utils.helpers.ConduitTokenHelper;
+import cucumber_blueprint.utils.support.ConduitTokenHelper;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

@@ -1,4 +1,4 @@
-package cucumber_blueprint.core.driver.helpers;
+package cucumber_blueprint.core.driver.support;
 
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;

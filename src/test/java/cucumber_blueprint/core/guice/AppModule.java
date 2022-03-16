@@ -3,7 +3,6 @@ package cucumber_blueprint.core.guice;
 import com.google.inject.AbstractModule;
 
 import cucumber_blueprint.core.driver.*;
-import cucumber_blueprint.core.driver.helpers.DriverHelpers;
 import io.cucumber.guice.ScenarioScoped;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TakesScreenshot;
@@ -17,9 +16,9 @@ public class AppModule extends AbstractModule {
     @Override
     protected void configure() {
         bind(WebDriver.class).toProvider(WebDriverProvider.class).in(ScenarioScoped.class);
-        bind(WebDriverWait.class).toProvider(WebDriverWaitProvider.class);
-        bind(FluentWait.class).toProvider(FluentWaitProvider.class);
-        bind(JavascriptExecutor.class).toProvider(JavaScriptExecutorProvider.class);
+        bind(WebDriverWait.class).toProvider(WebDriverWaitProvider.class).in(ScenarioScoped.class);
+        bind(FluentWait.class).toProvider(FluentWaitProvider.class).in(ScenarioScoped.class);
+        bind(JavascriptExecutor.class).toProvider(JavaScriptExecutorProvider.class).in(ScenarioScoped.class);
         bind(TakesScreenshot.class).toProvider(TakesScreenshotProvider.class).in(ScenarioScoped.class);
         bind(WebStorage.class).toProvider(WebStorageProvider.class).in(ScenarioScoped.class);
     }

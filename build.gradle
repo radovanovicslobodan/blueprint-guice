@@ -66,6 +66,8 @@ dependencies {
     // GSON
     testImplementation group: 'com.google.code.gson', name: 'gson', version: '2.9.0'
 
+    // Faker
+    testImplementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
 }
 
 test {

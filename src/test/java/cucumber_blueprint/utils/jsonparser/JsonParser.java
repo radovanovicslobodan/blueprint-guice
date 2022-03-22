@@ -29,9 +29,7 @@ public class JsonParser {
 
         Map<String, Object> jsonMap = new Gson().fromJson(getLocalJsonFile, mapTokenType);
 
-        Map<String, Object> parsedMap = parseMap(jsonMap);
-
-        return parsedMap;
+        return parseMap(jsonMap);
     }
 
     private static Map<String, Object> parseMap(Map<String, Object> map) {

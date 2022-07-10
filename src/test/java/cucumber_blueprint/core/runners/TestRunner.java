@@ -11,7 +11,7 @@ import org.testng.annotations.DataProvider;
                 "cucumber_blueprint",
                 "io.cucumber.guice.InjectorSource"
         },
-        tags = "@ui",
+        tags = "",
         plugin = {
                 "pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "summary"

@@ -25,6 +25,8 @@ public class DriverHooks {
             TakesScreenshot ts = (TakesScreenshot) driver;
             byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "some name");
+//            driver.manage().deleteAllCookies();
+//            driver.quit();
         }
 
         if (driver != null) {

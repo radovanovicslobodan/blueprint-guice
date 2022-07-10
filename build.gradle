@@ -69,6 +69,10 @@ dependencies {
     // Owner
     testImplementation group: 'org.aeonbits.owner', name: 'owner', version: '1.0.12'
 
+    // https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter
+    implementation group: 'tech.grasshopper', name: 'extentreports-cucumber7-adapter', version: '1.7.0'
+
+
 }
 
 test {

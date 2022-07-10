@@ -13,7 +13,8 @@ import org.testng.annotations.DataProvider;
         },
         tags = "@ui",
         plugin = {
-                "pretty"
+                "pretty",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "summary"
         }
 )
 @Slf4j

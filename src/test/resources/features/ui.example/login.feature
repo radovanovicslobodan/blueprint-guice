@@ -1,4 +1,4 @@
-#@ui @regression
+@ui
 Feature: Login
 
   Background:

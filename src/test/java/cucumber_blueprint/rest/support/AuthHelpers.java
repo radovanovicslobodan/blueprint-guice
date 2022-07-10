@@ -8,6 +8,8 @@ import cucumber_blueprint.utils.ApiUtils;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+import static io.restassured.RestAssured.given;
+
 public class AuthHelpers {
 
     public static Response postCreateAuthToken(String username, String password) {

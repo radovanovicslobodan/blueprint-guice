@@ -43,8 +43,8 @@ public class TestSteps extends BaseUiSteps {
 
     @Then("Google logo is present")
     public void checkGoogleLogo() {
-        assertions.assertThat(googlePage.checkLogo().isDisplayed());
-        assertions.assertThat(googlePage.checkLogo().isEnabled());
+        assertions.assertThat(googlePage.checkLambdaLogo().isDisplayed());
+        assertions.assertThat(googlePage.checkLambdaLogo().isEnabled());
         assertions.assertAll();
     }
 

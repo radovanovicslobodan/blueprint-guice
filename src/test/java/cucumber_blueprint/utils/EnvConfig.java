@@ -2,8 +2,10 @@ package cucumber_blueprint.utils;
 
 import org.aeonbits.owner.Config;
 
+@Config.LoadPolicy(Config.LoadType.FIRST)
 @Config.Sources({
-        "classpath:config.properties"
+        "classpath:config.properties",
+        "system:properties"
 })
 public interface EnvConfig extends Config {
 
@@ -11,7 +13,7 @@ public interface EnvConfig extends Config {
     @DefaultValue("chrome")
     String driverType();
 
-    @Config.Key("baseRestUri")
+    @Config.Key("REST_URI")
     String baseRestUri();
 
     @Config.Key("baseWebUri")
